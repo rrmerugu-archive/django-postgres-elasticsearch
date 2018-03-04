@@ -77,10 +77,14 @@ WSGI_APPLICATION = 'example_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -120,7 +124,7 @@ STATIC_URL = '/static/'
 
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': os.environ.get('ES_HOST', 'localhost:9200'),
+        'hosts': os.environ.get('ES_HOST', 'elasticsearch:9200'),
         'timeout': 30,
     },
 }
@@ -139,3 +143,6 @@ ES_INDEX.settings(
     number_of_shards=1,
     number_of_replicas=0
 )
+
+
+APPEND_SLASH = False

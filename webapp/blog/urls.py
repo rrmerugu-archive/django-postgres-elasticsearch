@@ -7,5 +7,5 @@ router.register(r'blogs', views.BlogViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
-    url(r'^blog-es$', es_views.ESBlogViewSet.as_view({'get': 'list'}))
+    url(r'^blogs-es$', es_views.ESBlogViewSet.as_view({'get': 'list'}))
 ]
