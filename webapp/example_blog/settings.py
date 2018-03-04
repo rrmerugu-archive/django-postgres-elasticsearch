@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'django_elasticsearch_dsl',
+    'django_elasticsearch_dsl_drf',
     'blog'
 ]
 
@@ -119,8 +120,14 @@ STATIC_URL = '/static/'
 
 ELASTICSEARCH_DSL = {
     'default': {
-        'hosts': os.environ.get('ES_HOST', 'localhost:9200')
+        'hosts': os.environ.get('ES_HOST', 'localhost:9200'),
+        'timeout': 30,
     },
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 30
 }
 
 from django_elasticsearch_dsl import Index
