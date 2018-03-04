@@ -18,3 +18,10 @@ This implementation will update/index the data to the elasticsearch as data is c
 ##
 
 `http://localhost:9200/example_blog/_search`
+
+
+
+## References:
+
+- https://github.com/sabricot/django-elasticsearch-dsl
+- https://github.com/barseghyanartur/django-elasticsearch-dsl-drf
