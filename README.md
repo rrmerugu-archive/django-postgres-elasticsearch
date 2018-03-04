@@ -7,6 +7,17 @@ django sytle api with pagination using elasticsearch backend.
 
 The code uses `example_blog` as postgres db name and `example_blog` as index name in elasticsearch.
 
+## Why postgres + elasticsearch stack !
+
+- **postgres** - "The world's most advanced open source database" as their website claims is 
+very well supported by Django and has `jsonfield` support by django which is awesome. Its suits 
+very well for any application because most of the user facing applications are expected to have a 
+structured data.
+
+- **elasticsearch** - Elasticsearch is a search engine based on Lucene. It provides a distributed,
+ multitenant-capable full-text search engine. It is very good when the data is huge and you want to 
+ have a search API/functionality  in your application. You can build a searchengine with it, because 
+ it have search tons of data with ease.
 
 ## How to run 
 
@@ -29,7 +40,7 @@ be ignored. elasticsearch will create an index when needed anyways.
 
 
 
-##Features and todo:
+## Features and todo:
 
 - [*] django with postgres
 - [*] CRUD operations - using Restful webservices.
