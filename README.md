@@ -45,7 +45,7 @@ be ignored. elasticsearch will create an index when needed anyways.
 - Postgres 9.6
 - [django-elasticsearch-dsl](https://github.com/sabricot/django-elasticsearch-dsl)
 - [django-elasticsearch-dsl-drf](https://github.com/barseghyanartur/django-elasticsearch-dsl-drf)
-i
+
 
 
 ## References:
