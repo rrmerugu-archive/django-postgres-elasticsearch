@@ -1,4 +1,4 @@
-Django==1.11
+Django==1.11.28
 django-elasticsearch-dsl==0.4.4
 django-elasticsearch-dsl-drf==0.6.3
 django-nine==0.1.13
